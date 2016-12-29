@@ -1,0 +1,16 @@
+{
+  "name": "caringbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-sass": "3.3.7",
+    "jquery": "1.9.1"
+  },
+  "devDependencies": {
+    "grunt": "1.0.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-sass": "1.2.1",
+    "node-sass": "3.13.0"
+  }
+}
