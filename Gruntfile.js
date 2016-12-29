@@ -2,7 +2,7 @@
  * Created by apium on 28/10/2016.
  */
 module.exports = function(grunt) {
-	var scssFiles = 'wp-content/themes/vintage/**/*.scss';
+	var scssFiles = 'assets/**/*.scss';
 	var htmlFile = 'template/**/*.html';
 
 	grunt.initConfig({
