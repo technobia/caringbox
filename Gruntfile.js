@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed'
 				},
 				files: {
-					'wp-content/themes/vintage/assets/css/style.min.css': 'wp-content/themes/vintage/assets/scss/main.scss'
+					'assets/css/style.min.css': 'assets/scss/main.scss'
 				}
 			}
 		},
