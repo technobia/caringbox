@@ -1,3 +1,6 @@
+$red: #cc3333;
+$yellow: #ffe50c;
+
 body {
   @extend .open-sans;
   font-size: 14px;
@@ -44,6 +47,59 @@ body {
   .right {
     iframe {
       border: 0;
+    }
+  }
+}
+
+#two {
+  position: relative;
+  padding: 0;
+
+  .title {
+    text-align: center;
+    @include flex-box(70px, 50%, auto, auto);
+    margin-left: -160px;
+    z-index: 1;
+  }
+
+  .left {
+    background: url(../../assets/img/tam-soat-ung-thu-dot-quy/world-map.png) no-repeat center center;
+    background-size: 500px auto;
+
+    .fa {
+      color: $red;
+    }
+  }
+
+  .right {
+    color: white;
+    background: #213035 url(../../assets/img/tam-soat-ung-thu-dot-quy/smoke.png) no-repeat center center;
+    background-size: cover;
+
+    .fa {
+      color: $yellow;
+    }
+  }
+
+  .left, .right {
+    padding: 200px 0 120px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text-content {
+      h3 {
+        font-size: 20px;
+        margin-bottom: 22px;
+      }
+
+      ul li {
+        padding: 5px 0;
+
+        .fa {
+          margin-right: 15px;
+        }
+      }
     }
   }
 }
