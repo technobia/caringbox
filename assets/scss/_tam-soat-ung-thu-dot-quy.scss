@@ -210,3 +210,61 @@ body {
     }
   }
 }
+
+#seven {
+  background: $lightgrey;
+  padding: 90px 0 130px 0;
+
+  .item-inner {
+    padding: 0 15%;
+    display: flex;
+  }
+
+  .left {
+    .pic {
+      border-radius: 136px;
+      overflow: hidden;
+      margin-right: 50px;
+    }
+  }
+
+  .right {
+    flex: 1;
+
+    p {
+      line-height: 28px;
+      color: $grey;
+    }
+
+    .divine {
+      display: block;
+      height: 2px;
+      width: 55px;
+      background: $blue;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 16px;
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  .carousel-indicators {
+    bottom: -75px;
+    margin-bottom: 0;
+
+    li {
+      background: #cccccc;
+      border: 0;
+      margin: 0 3px;
+
+      &.active {
+        background: #999999;
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
