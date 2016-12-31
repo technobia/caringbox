@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="vn">
+<html lang="vn" ng-app="caringbox">
 <head>
     <meta charset="UTF-8">
     <title>Tầm soát ung thư đột quỵ</title>
     <link rel="stylesheet" href="assets/css/style.min.css" type="text/css">
     <script src="scripts/jquery/jquery.min.js" type="text/javascript"></script>
     <script src="scripts/bootstrap/dist/js/bootstrap.js" type="text/javascript"></script>
+    <!--Angular-->
+    <script src="scripts/angular/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/angular/angular-animate.min.js" type="text/javascript"></script>
+    <script src="scripts/angular/angular-touch.min.js" type="text/javascript"></script>
+    <script src="scripts/angular/angular-ui-bootstrap.js" type="text/javascript"></script>
 </head>
-<body>
+<body ng-controller="TamSoatUngThuDotQuyController">
     <section id="one" class="container-fluid">
         <div class="container">
             <div class="left col-sm-5">
@@ -29,7 +34,7 @@
         <div class="email-contact">
             <p>Nhập email của bạn bên dưới để tham gia miễn phí</p>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Nhập email của bạn">
+                <input type="text" class="form-control" placeholder="Nhập email của bạn" ng-model="data.email">
                 <div class="input-group-addon">GỬI</div>
             </div>
         </div>
@@ -226,5 +231,9 @@
             </div>
         </div>
     </section>
+
+    <!--Angular modules-->
+    <script src="app/main.js" type="text/javascript"></script>
+    <script src="app/controllers/TamSoatUngThuDotQuyController.js" type="text/javascript"></script>
 </body>
 </html>
