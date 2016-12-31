@@ -11,6 +11,7 @@
     <script src="scripts/angular/angular-animate.min.js" type="text/javascript"></script>
     <script src="scripts/angular/angular-touch.min.js" type="text/javascript"></script>
     <script src="scripts/angular/angular-ui-bootstrap.js" type="text/javascript"></script>
+    <script src="scripts/angular/angular-ui-bootstrap-tpls.js" type="text/javascript"></script>
 </head>
 <body ng-controller="TamSoatUngThuDotQuyController">
     <section id="one" class="container-fluid">
@@ -35,7 +36,7 @@
             <p>Nhập email của bạn bên dưới để tham gia miễn phí</p>
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Nhập email của bạn" ng-model="data.email">
-                <div class="input-group-addon">GỬI</div>
+                <div class="input-group-addon" ng-click="event.onOpenForm()">GỬI</div>
             </div>
         </div>
     </section>
@@ -224,7 +225,7 @@
                     <div class="contact-block">
                         <h3>KHÔNG TÌM THẤY CÂU TRẢ LỜI CỦA BẠN?</h3>
                         <div class="text-center">Liên hệ với chúng tôi</div>
-                        <button class="btn btn-trans"><i class="fa fa-envelope"></i>EMAIL</button>
+                        <button class="btn btn-trans" ng-click="event.onOpenForm()"><i class="fa fa-envelope"></i>EMAIL</button>
                         <button class="btn btn-trans"><i class="fa fa-facebook-f"></i>FACEBOOK</button>
                     </div>
                 </div>

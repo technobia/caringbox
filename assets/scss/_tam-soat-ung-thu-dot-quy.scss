@@ -5,6 +5,10 @@ $yellow: #ffe50c;
 $lightgrey: #f5f5f5;
 $grey: #666666;
 
+.animation {
+  @include vendor(transition, ease-out 0.3s);
+}
+
 body {
   @extend .open-sans;
   font-size: 14px;
@@ -364,10 +368,73 @@ body {
       border: 1px solid white;
       margin: 15px auto;
       @extend .utm-impact;
+      letter-spacing: 1px;
+      @extend .animation;
+
+      &:hover {
+        color: rgba($grey, 0.5);
+      }
 
       .fa {
         margin-right: 10px;
       }
+    }
+  }
+}
+
+.register-form {
+  .btn-close {
+    @include flex-box(0, auto, auto, 0);
+    @extend .animation;
+    color: rgba(white, 0.5);
+    font-size: 16px;
+    top: -26px;
+    cursor: pointer;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .modal-dialog {
+    margin-top: 70px;
+  }
+
+  .modal-content {
+    @include vendor(border-radius, 2px);
+  }
+
+  .modal-body {
+    position: relative;
+    text-align: center;
+    padding: 45px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      color: $grey;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    .form-control, .btn {
+      @include vendor(border-radius, 0);
+    }
+
+    input {
+      height: 44px;
+    }
+
+    .btn {
+      @extend .utm-impact;
+      height: 44px;
+      background: $lightblue;
+      letter-spacing: 1px;
+      padding: 0 50px;
     }
   }
 }

@@ -1,0 +1,20 @@
+<div class="modal-body">
+    <div class="btn-close" ng-click="event.dismiss()"><i class="fa fa-close"></i></div>
+    <img src="assets/img/tam-soat-ung-thu-dot-quy/contact-icon.jpg">
+    <h3>Liên hệ</h3>
+    <p>Vui lòng điền đầy đủ thông tin bên dưới</p>
+    <form action="" name="Form">
+        <div class="form-group" ng-class="{'has-error': Form.name.$dirty && Form.name.$invalid}">
+            <input type="text" name="name" ng-model="data.name" class="form-control" placeholder="Tên của bạn *" required>
+        </div>
+        <div class="form-group" ng-class="{'has-error': Form.email.$dirty && Form.email.$invalid}">
+            <input type="text" name="email" ng-model="data.email" class="form-control" placeholder="Email của bạn *" required>
+        </div>
+        <div class="form-group" ng-class="{'has-error': Form.message.$dirty && Form.message.$invalid}">
+            <textarea name="message" ng-model="data.message" rows="5" class="form-control" placeholder="Nội dung *" required></textarea>
+        </div>
+        <div class="form-group text-center">
+            <button class="btn btn-info text-center" ng-disabled="Form.$invalid">GỬI</button>
+        </div>
+    </form>
+</div>
