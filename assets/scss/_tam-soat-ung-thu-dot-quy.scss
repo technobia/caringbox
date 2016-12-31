@@ -371,7 +371,10 @@ body {
       letter-spacing: 1px;
       @extend .animation;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus,
+      &:visited {
         color: rgba($grey, 0.5);
       }
 
