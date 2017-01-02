@@ -80,6 +80,32 @@ body {
       margin-left: -40%;
     }
   }
+
+  @media (max-width: 767px) {
+    padding-top: 15px;
+
+    .left h1 {
+      margin-bottom: 15px;
+    }
+
+    .right {
+      padding: 0;
+
+      iframe {
+        height: 200px;
+      }
+    }
+
+    .email-contact {
+      width: 100%;
+      margin-left: -50%;
+
+      .input-group-addon {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  }
 }
 
 .email-contact {
@@ -169,6 +195,16 @@ body {
   @media (min-width: 768px) {
     .left, .right {
       padding-top: 120px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .left, .right {
+      padding: 70px 10px;
+    }
+
+    .text-content {
+      text-align: center;
     }
   }
 }
@@ -314,6 +350,12 @@ body {
       }
     }
   }
+
+  @media (max-width: 767px) {
+    .row {
+      margin-top: 15px;
+    }
+  }
 }
 
 #seven {
@@ -370,6 +412,17 @@ body {
         width: 10px;
         height: 10px;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .item-inner {
+      flex-direction: column;
+    }
+
+    .pic {
+      width: 136px;
+      height: 136px;
     }
   }
 }
@@ -449,6 +502,14 @@ body {
       .fa {
         margin-right: 10px;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 70px 0;
+
+    .question-list .item {
+      width: 100%;
     }
   }
 }
