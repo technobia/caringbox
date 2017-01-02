@@ -64,7 +64,7 @@ body {
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     padding: 70px 0 120px 0;
 
     .left {
@@ -192,7 +192,7 @@ body {
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     .left, .right {
       padding-top: 120px;
     }
@@ -242,6 +242,7 @@ body {
 
     &:last-child {
       background-image: url(../../assets/img/tam-soat-ung-thu-dot-quy/bg-slide-3.jpg);
+      background-position: center right;
     }
 
     &-inner {
@@ -284,8 +285,25 @@ body {
 #five {
   background: $lightgrey;
 
+  .pic {
+    height: 240px;
+  }
+
   img {
     @extend .image-fit;
+    object-fit: contain;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .pic {
+      height: auto;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .pic {
+      height: auto;
+    }
   }
 }
 
