@@ -12,7 +12,8 @@ module.exports = function(grunt) {
 					outputStyle: 'compressed'
 				},
 				files: {
-					'assets/css/style.min.css': 'assets/scss/main.scss'
+					'assets/css/tam-soat-ung-thu-dot-quy-style.min.css': 'assets/scss/tamsoatungthudotquy.scss',
+					'assets/css/thuc-pham-chua-ung-thu-style.min.css': 'assets/scss/thucphamchuaungthu.scss'
 				}
 			}
 		},
