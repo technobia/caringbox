@@ -18,6 +18,7 @@ $grey: #666666;
 body {
   @extend .open-sans;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 #one {
@@ -183,6 +184,7 @@ body {
       }
 
       ul li {
+        font-size: 16px;
         padding: 5px 0;
 
         .fa {
@@ -263,9 +265,9 @@ body {
   }
 
   p {
-    color: #999999;
+    padding: 0;
+    color: #333333;
     line-height: 26px;
-    font-weight: 100;
     font-size: 16px;
   }
 
@@ -277,7 +279,9 @@ body {
 
   .pic {
     img {
-      @extend .image-fit;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
   }
 }
@@ -360,6 +364,7 @@ body {
       }
 
       ul li {
+        font-size: 16px;
         padding: 5px 0;
 
         .fa {
@@ -390,6 +395,10 @@ body {
       border-radius: 136px;
       overflow: hidden;
       margin-right: 50px;
+
+      img {
+        width: 136px;
+      }
     }
   }
 
@@ -413,6 +422,7 @@ body {
       font-size: 16px;
       margin-top: 30px;
       margin-bottom: 0;
+      text-transform: uppercase;
     }
   }
 
@@ -467,7 +477,7 @@ body {
     flex-wrap: wrap;
 
     .item {
-      width: 50%;
+      width: 100%;
       padding: 0 15px;
       margin-bottom: 15px;
 
@@ -478,7 +488,7 @@ body {
 
       p {
         color: $grey;
-        font-size: 12px;
+        font-size: 14px;
       }
     }
   }
