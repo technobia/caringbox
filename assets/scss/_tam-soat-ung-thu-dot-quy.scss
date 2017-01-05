@@ -291,6 +291,12 @@ body {
 
   .pic {
     height: 240px;
+    display: flex;
+    justify-content: center;
+
+    &-right {
+      margin-left: -2px;
+    }
   }
 
   img {
@@ -301,12 +307,14 @@ body {
   @media (min-width: 768px) and (max-width: 1023px) {
     .pic {
       height: auto;
+      flex-direction: column;
     }
   }
 
   @media (max-width: 767px) {
     .pic {
       height: auto;
+      flex-direction: column;
     }
   }
 }
