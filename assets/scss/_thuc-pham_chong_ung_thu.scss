@@ -141,6 +141,7 @@ body {
       font-weight: 400;
       font-size: 24px;
       margin: 0 0 20px;
+      text-transform: uppercase;
     }
 
     p {
@@ -220,6 +221,12 @@ body {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
+  }
+
+  h3 {
+    margin: 30px 0 20px;
+    font-size: 24px;
+    text-transform: uppercase
   }
 
   p {
@@ -317,6 +324,7 @@ body {
   h1 {
     margin: 60px 0 20px;
     font-size: 24px;
+    text-transform: uppercase;
   }
 
   .separate {
@@ -384,35 +392,72 @@ body {
 
 #six {
   padding: 70px 0;
-  background: #f5f5f5;
 
-  .container > div {
-    text-align: center;
+  h1 {
+    font-size: 24px;
+    margin: 0 0 30px;
+  }
 
-    .icon {
-      margin-bottom: 20px;
+  .container {
+  }
+
+  .item {
+    &-inner {
+      border: 1px solid #e1e1e1;
+      border-radius: 400px 400px 0 0;
+      color: $green;
+      position: relative;
+      -webkit-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        background: $green none repeat scroll 0 0;
+        border-color: $green;
+        color: #fff;
+      }
+    }
+
+    .header {
+      text-align: center;
+
+      .icon {
+        border: 1px solid #e1e1e1;
+        border-radius: 50%;
+        margin-bottom: 50px;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+
+        img {
+          border-radius: 50%;
+          width: 100%;
+        }
+      }
+
+      .author {
+        font-size: 24px;
+
+        span {
+          display: block;
+          margin-bottom: 20px;
+          font-size: 14px;
+        }
+      }
     }
 
     p {
-      font-size: $font-size-text;
-      font-weight: 100;
-      height: 120px;
-    }
-
-    .author {
-      color: #666666;
-      font-size: $font-size-text;
-      font-weight: 700;
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
     }
   }
 
-  @media (max-width: 767px) {
-    padding: 20px 0;
-
-    .container > div {
-      margin-top: 30px;
-    }
-  }
+  //@media (max-width: 767px) {
+  //  padding: 20px 0;
+  //
+  //  .container > div {
+  //    margin-top: 30px;
+  //  }
+  //}
 }
 
 #seven {
@@ -505,6 +550,7 @@ body {
     h1 {
       margin: 0 0 10px;
       font-size: 24px;
+      text-transform: uppercase;
     }
 
     .list {
