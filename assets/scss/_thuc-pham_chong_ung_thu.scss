@@ -2,6 +2,10 @@ $green: #69bd43;
 
 $font-size-text: 16px;
 
+.container-fluid {
+  overflow: hidden;
+}
+
 .animation {
   @include vendor(transition, ease-out 0.3s);
 }
