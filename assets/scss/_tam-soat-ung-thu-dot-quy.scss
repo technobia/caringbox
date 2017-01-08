@@ -329,12 +329,9 @@ body {
   }
 
   h3 {
+    font-size: 30px;
     margin: 7px 0;
-    @extend .utm-impact;
-
-    &.grey {
-      color: $grey;
-    }
+    color: #669900;
   }
 
   .row {
@@ -419,6 +416,30 @@ body {
   @media (max-width: 767px) {
     .row {
       margin-top: 15px;
+      flex-direction: column;
+
+      .block-pic {
+        margin-bottom: 30px;
+      }
+
+      .container {
+        flex-direction: column;
+
+        .block-pic {
+          margin-top: 30px;
+          margin-bottom: 0;
+        }
+      }
+
+      .block-pic {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .pic {
+        margin: auto;
+      }
     }
   }
 }
