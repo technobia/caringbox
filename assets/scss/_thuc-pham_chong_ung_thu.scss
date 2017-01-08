@@ -1,5 +1,7 @@
 $green: #69bd43;
 
+$font-size-text: 16px;
+
 .animation {
   @include vendor(transition, ease-out 0.3s);
 }
@@ -107,13 +109,13 @@ body {
   }
 
   span {
-    font-size: 18px;
+    font-size: $font-size-text;
     font-style: italic;
     margin-bottom: 50px;
   }
 
   p {
-    font-size: 18px;
+    font-size: $font-size-text;
     font-weight: 100;
     padding: 0 10%;
     text-align: center;
@@ -145,6 +147,7 @@ body {
       margin-bottom: 25px;
       padding: 0 10%;
       font-weight: 200;
+      font-size: $font-size-text;
     }
   }
 
@@ -180,7 +183,7 @@ body {
         text-align: center;
         position: absolute;
         padding: 30px;
-        font-size: 24px;
+        font-size: $font-size-text;
         font-weight: 100;
         background: rgba(white, 0.2);
 
@@ -199,6 +202,12 @@ body {
       }
     }
   }
+
+  @media (max-width: 767px) {
+    .item {
+      height: 250px !important;
+    }
+  }
 }
 
 #four {
@@ -214,13 +223,15 @@ body {
   }
 
   p {
-    font-size: 20px;
+    font-size: $font-size-text;
     font-weight: 100;
     padding: 0 10%;
   }
 
   .lifepak {
-    background: url(../../assets/img/thuc-pham-chong-ung-thu/lifepak.jpg) no-repeat center center;
+    background-image: url(../../assets/img/thuc-pham-chong-ung-thu/lifepak.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: contain;
     margin-top: 50px;
 
@@ -266,8 +277,35 @@ body {
   }
 
   @media (max-width: 767px) {
+    .container {
+      padding: 0;
+    }
+
     p {
       padding: 0;
+    }
+
+    .item {
+      padding: 10px 0 !important;
+      justify-content: flex-start !important;
+      text-align: left !important;
+    }
+
+    .plus {
+      margin-left: 0 !important;
+      margin-right: 10px !important;
+    }
+
+    .lifepak {
+      background-position: top center;
+      background-size: cover;
+      position: relative;
+
+      &:before {
+        content: '';
+        @include flex-box(0, 0, 0, 0);
+        background: rgba(white, 0.75);
+      }
     }
   }
 }
@@ -314,6 +352,34 @@ body {
       }
     }
   }
+
+  @media (max-width: 767px) {
+    h1 {
+      margin: 30px 0 5px;
+    }
+
+    .separate {
+      margin-bottom: 20px;
+    }
+
+    .container {
+      .block {
+        .pic {
+          height: auto;
+          margin-bottom: 10px;
+
+          img {
+            height: auto;
+          }
+        }
+
+        .text {
+          text-align: center;
+          padding: 0;
+        }
+      }
+    }
+  }
 }
 
 #six {
@@ -328,15 +394,23 @@ body {
     }
 
     p {
-      font-size: 18px;
+      font-size: $font-size-text;
       font-weight: 100;
       height: 120px;
     }
 
     .author {
       color: #666666;
-      font-size: 18px;
+      font-size: $font-size-text;
       font-weight: 700;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px 0;
+
+    .container > div {
+      margin-top: 30px;
     }
   }
 }
@@ -358,12 +432,12 @@ body {
 
     > h1 {
       margin: 0 0 10px;
-      font-size: 18px;
+      font-size: $font-size-text;
     }
 
     > h2 {
       margin: 0 0 10px;
-      font-size: 18px;
+      font-size: $font-size-text;
       color: $green;
     }
 
@@ -392,6 +466,27 @@ body {
       font-weight: 800;
     }
   }
+
+  @media (max-width: 767px) {
+    padding: 0;
+
+    .left {
+      padding: 0;
+      height: auto;
+
+      img {
+        height: auto;
+      }
+    }
+
+    .right {
+      padding: 10px;
+
+      .list div {
+        width: 100%;
+      }
+    }
+  }
 }
 
 #eight {
@@ -418,6 +513,20 @@ body {
       span {
         font-weight: 700;
         color: $green;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .left {
+      opacity: 0.2;
+    }
+
+    .right {
+      padding: 20px;
+
+      .list {
+        padding: 0;
       }
     }
   }
@@ -452,5 +561,16 @@ footer {
   .fa {
     margin-right: 10px;
     font-size: 20px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+
+    > * {
+      margin: 5px 0 !important;
+      text-align: center
+    }
   }
 }
