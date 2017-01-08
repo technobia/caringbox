@@ -32,6 +32,10 @@ body {
   background-size: cover;
   color: white;
 
+  &.container-fluid {
+    overflow: unset;
+  }
+
   .left {
     h3 {
       font-size: 26px;
