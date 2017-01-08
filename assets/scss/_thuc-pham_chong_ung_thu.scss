@@ -21,6 +21,7 @@ $green: #69bd43;
 body {
   @extend .open-sans;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 #one {
@@ -90,6 +91,7 @@ body {
   .container {
     @extend .center-middle;
     flex-direction: column;
+    text-align: center;
   }
 
   h1 {
@@ -260,6 +262,12 @@ body {
       .plus {
         margin-left: 20px;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    p {
+      padding: 0;
     }
   }
 }
