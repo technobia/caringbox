@@ -16,5 +16,9 @@ function MainController($scope, $location) {
         $scope.content = 'thuc-pham-chong-ung-thu.html';
         $scope.title = 'Thực Phẩm Chống Ung Thư';
         $scope.type = 2;
+    } else if ($location.absUrl().indexOf('dulichnuocngoaimienphi.net') > -1) {
+        $scope.content = 'du-lich-nuoc-ngoai-mien-phi.html';
+        $scope.title = 'Du Lịch Nước Ngoài Miễn Phí';
+        $scope.type = 3;
     }
 }
