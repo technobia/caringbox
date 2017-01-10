@@ -10,7 +10,11 @@ app.controller('MainController', ['$scope', '$location', MainController]);
 function MainController($scope, $location) {
     if ($location.absUrl().indexOf('tamsoatungthudotquy.net') > -1) {
         $scope.content = 'tam-soat-ung-thu-dot-quy.html';
+        $scope.title = 'Tầm Soát Ung Thư Đột Quỵ';
+        $scope.type = 1;
     } else if ($location.absUrl().indexOf('thucphamchongungthu.net') > -1) {
         $scope.content = 'thuc-pham-chong-ung-thu.html';
+        $scope.title = 'Thực Phẩm Chống Ung Thư';
+        $scope.type = 2;
     }
 }
