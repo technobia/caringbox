@@ -1,4 +1,8 @@
-$font-size-big: 30px;
+$font-size-large: 30px;
+$font-size-medium: 24px;
+$font-size-normal: 18px;
+$font-size-small: 14px;
+$dark: #4f4d4e;
 
 .animation {
   @include vendor(transition, ease-out 0.3s);
@@ -16,7 +20,7 @@ $font-size-big: 30px;
 
 body {
   @extend .open-sans;
-  font-size: 14px;
+  font-size: $font-size-normal;
   overflow-x: hidden;
 }
 
@@ -53,6 +57,45 @@ body {
         font-size: 24px;
         color: white;
       }
+    }
+  }
+}
+
+#about-us {
+  background: #f6f4f5 url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/world-map.png) no-repeat center center;
+  background-size: contain;
+  height: 550px;
+
+  .container {
+    height: 100%;
+  }
+
+  .block-text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    h1 {
+      @extend .utm-impact;
+      color: $dark;
+      font-size: $font-size-large;
+      margin: 0 0 30px;
+    }
+
+    p {
+      font-size: $font-size-normal;
+      line-height: 24px;
+    }
+
+    .btn {
+      margin-top: 30px;
+      font-size: $font-size-normal;
+      @extend .utm-impact;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 180px;
+      height: 44px;
+      line-height: 32px;
     }
   }
 }
