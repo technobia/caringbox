@@ -8,5 +8,7 @@ var app = angular.module('caringbox', [
 app.controller('MainController', ['$scope', '$location', MainController]);
 
 function MainController($scope, $location) {
-    if ($location.absUrl().indexOf('localhost') > -1) console.log(true);
+    if ($location.absUrl().indexOf('tamsoatungthudotquy.net') > -1) {
+        $scope.content = 'tam-soat-ung-thu-dot-quy.html';
+    }
 }
