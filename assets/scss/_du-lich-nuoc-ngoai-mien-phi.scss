@@ -37,10 +37,16 @@ body {
       @include flex-box(0, 0, 0, 0);
       @extend .center-middle;
 
+      .bordered {
+        padding: 30px;
+        border: 2px dashed white;
+      }
+
       h1 {
         @extend .utm-impact;
         color: white;
         font-size: 48px;
+        margin: 0;
       }
 
       .fa {
