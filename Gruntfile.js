@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'assets/css/tam-soat-ung-thu-dot-quy-style.min.css': 'assets/scss/tamsoatungthudotquy.scss',
-					'assets/css/thuc-pham-chong-ung-thu-style.min.css': 'assets/scss/thucphamchongungthu.scss'
+					'assets/css/thuc-pham-chong-ung-thu-style.min.css': 'assets/scss/thucphamchongungthu.scss',
+					'assets/css/du-lich-nuoc-ngoai-mien-phi-style.min.css': 'assets/scss/dulichnuocngoaimienphi.scss'
 				}
 			}
 		},
