@@ -1,5 +1,5 @@
 $positions: top left right bottom;
-$numbers: 0 5 10 15;
+$numbers: 0 5 10 15 20 25 30 35 40 45 50;
 
 @each $position in $positions {
   @each $num in $numbers {

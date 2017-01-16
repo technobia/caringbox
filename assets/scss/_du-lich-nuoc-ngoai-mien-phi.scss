@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba($dark, 0.5);
 }
 
+.padding-default {
+  padding: 70px 0;
+}
+
 body {
   @extend .open-sans;
   font-size: $font-size-normal;
@@ -183,6 +187,154 @@ body {
 
       img {
         @extend .image-fit;
+      }
+    }
+  }
+}
+
+#instruction {
+  @extend .center-middle;
+  height: 550px;
+  background: url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/bg-2.jpg) no-repeat center center;
+  background-size: cover;
+
+  .container-inner {
+    width: 60%;
+    padding: 35px 50px;
+    background: rgba(#514426, 0.5);
+    color: white;
+    text-align: center;
+
+    .separate {
+      background: rgba(white, 0.5);
+    }
+
+    h2 {
+      margin-top: 15px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-weight: 600;
+        flex-shrink: 0;
+        margin: 0 30px;
+      }
+
+      &:before, &:after {
+        content: '';
+        border-bottom: 3px dashed white;
+        width: 100%;
+      }
+    }
+
+    .box {
+      border: 3px dashed white;
+      border-top: 0;
+      margin-top: -5px;
+      padding: 20px 40px;
+    }
+  }
+}
+
+#how-we-did {
+  .content {
+    margin-top: 145px;
+    display: flex;
+
+    .left, .right {
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        h3 {
+          color: $blue;
+          top: 0;
+          @include vendor(transform, translateY(-200%));
+        }
+
+        .left-inner, .right-inner {
+          opacity: 1;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        @include vendor(transition, ease-out 0.5s);
+      }
+
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -15px;
+        opacity: 0;
+        @include vendor(transition, ease-out 0.5s);
+
+        .item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 88px;
+
+          &-icon {
+            width: 66px;
+            height: 74px;
+            margin: 0 35px;
+            background: url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/box.jpg) no-repeat center center;
+            @extend .center-middle;
+
+            .fa {
+              font-size: $font-size-medium;
+              color: $blue;
+            }
+          }
+
+          &-text {
+            h4 {
+              font-weight: 600;
+            }
+
+            span {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .left {
+      width: 100%;
+
+      .item {
+        justify-content: flex-end;
+
+        &-text {
+          text-align: right;
+          width: 50%;
+        }
+      }
+    }
+
+    .middle {
+      flex-shrink: 0;
+    }
+
+    .right {
+      width: 100%;
+
+      .item {
+        justify-content: flex-start;
+
+        &-text {
+          text-align: left;
+          width: 50%;
+        }
       }
     }
   }
