@@ -23,9 +23,9 @@
     <script src="vendor/aos/aos.js"></script>
 </head>
 <body>
-    <div ng-include="content" ng-controller="TamSoatUngThuDotQuyController" ng-if="type === 1"></div>
-    <div ng-include="content" ng-controller="ThucPhamChongUngThuController" ng-if="type === 2"></div>
-    <div ng-include="content" ng-if="type === 3"></div>
+    <div style="overflow-x: hidden" ng-include="content" ng-controller="TamSoatUngThuDotQuyController" ng-if="type === 1"></div>
+    <div style="overflow-x: hidden" ng-include="content" ng-controller="ThucPhamChongUngThuController" ng-if="type === 2"></div>
+    <div style="overflow-x: hidden" ng-include="content" ng-if="type === 3"></div>
     <script src="app/main.js" type="text/javascript"></script>
     <script src="app/controllers/TamSoatUngThuDotQuyController.js" type="text/javascript"></script>
     <script src="app/controllers/ThucPhamChongUngThuController.js" type="text/javascript"></script>
