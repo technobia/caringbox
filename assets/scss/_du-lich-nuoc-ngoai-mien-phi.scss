@@ -429,8 +429,6 @@ body {
 }
 
 #video, #video1 {
-  margin-bottom: 50px;
-
   .videoWrapper {
     position: relative;
     padding-bottom: 70%;
@@ -530,5 +528,98 @@ body {
         }
       }
     }
+  }
+}
+
+#testimonial {
+  position: relative;
+  height: 1000px;
+  background: url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/landscape-mountains-nature-lake.jpg) no-repeat center top;
+  background-size: cover;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .item {
+    .fa {
+      color: rgba(black, 0.5);
+      font-size: $font-size-large;
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+
+      .pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        overflow: hidden;
+        margin-right: 15px;
+
+        img {
+          @extend .image-fit;
+        }
+      }
+
+      .name {
+        color: white;
+        font-weight: 600;
+
+        span {
+          font-weight: normal;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+#form-contact {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 450px;
+  @include vendor(transform, translateX(-50%));
+  background: url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/texture-bg.png) no-repeat center center;
+  padding: 30px;
+  border-radius: 6px;
+
+  h2 {
+    font-weight: 700;
+    margin: 0 0 15px;
+    color: white;
+    @extend .utm-androgyne;
+  }
+
+  p {
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .form-control {
+    padding: 0 12px;
+    height: 55px;
+    font-size: $font-size-normal;
+    border-radius: 3px;
+  }
+
+  .btn {
+    width: 100%;
+    height: 55px;
+    line-height: 53px;
+    padding: 0 12px;
+    color: white;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 2px;
   }
 }
