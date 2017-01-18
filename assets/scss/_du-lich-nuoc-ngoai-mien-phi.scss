@@ -50,6 +50,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 70px 0;
 }
 
+@media (max-width: 1023px) {
+  .padding-default {
+    padding: 40px 0 !important;
+  }
+}
+
 body {
   @extend .open-sans;
   font-size: $font-size-normal;
@@ -82,7 +88,14 @@ body {
      margin: 15px 0;
      color: $darkblue;
      font-size: $font-size-medium;
-   }
+ }
+
+  @media (max-width: 1023px) {
+    .container-inner {
+      width: 90%;
+      padding: 15px;
+    }
+  }
 }
 
 #about-us {
@@ -125,6 +138,31 @@ body {
 
       img {
         @extend .image-fit;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    height: auto;
+
+    .container {
+      height: auto;
+      flex-direction: column;
+    }
+
+    .left, .right {
+      width: 100%;
+      padding: 15px;
+    }
+
+    .left {
+      padding-top: 50px;
+    }
+
+    .right {
+      .pic {
+        position: relative;
+        top: 0;
       }
     }
   }
@@ -194,6 +232,22 @@ body {
       }
     }
   }
+
+  @media (max-width: 1023px) {
+    .list-inner {
+      width: calc(310px * 2);
+    }
+  }
+
+  @media (max-width: 479px) {
+    .list-inner {
+      width: 310px;
+    }
+
+    .list-item:before {
+      content: unset !important;
+    }
+  }
 }
 
 #instruction {
@@ -240,6 +294,13 @@ body {
       border-top: 0;
       margin-top: -5px;
       padding: 20px 40px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .container-inner {
+      width: 90%;
+      padding: 15px 30px;
     }
   }
 }
@@ -346,6 +407,72 @@ body {
   }
 }
 
+#how-we-did-mobile {
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .parent {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-bottom: 30px;
+
+    h3 {
+      width: 100%;
+      text-align: center;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+
+      &-icon {
+        flex-shrink: 0;
+        width: 66px;
+        height: 74px;
+        margin: 0 35px;
+        background: url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/box.jpg) no-repeat center center;
+        @extend .center-middle;
+
+        .fa {
+          font-size: $font-size-medium;
+          color: $blue;
+        }
+      }
+
+      &-text {
+        h4 {
+          font-weight: 600;
+        }
+
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 479px) {
+    .parent {
+      .item {
+        flex-direction: column;
+
+        &-text {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 #reason-success {
   padding-bottom: 250px;
   background: url(../../assets/img/du-lich-nuoc-ngoai-mien-phi/bg-3.jpg) no-repeat center bottom;
@@ -423,6 +550,25 @@ body {
 
       .readmore {
         @include flex-box(auto, 10px, 10px, auto);
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .container-inner {
+      flex-direction: column;
+      align-items: center;
+
+      .item {
+        margin: 15px 0;
+      }
+    }
+  }
+
+  @media (max-width: 479px) {
+    .container-inner {
+      .item {
+        width: 95%;
       }
     }
   }
@@ -531,6 +677,41 @@ body {
   }
 }
 
+#what-you-get-mobile {
+  .container-inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item {
+      width: 250px;
+      margin-bottom: 30px;
+
+      .pic {
+        width: 250px;
+        height: 250px;
+        border-radius: 100%;
+        overflow: hidden;
+
+        img {
+          @extend .image-fit;
+        }
+      }
+
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
+
 #testimonial {
   position: relative;
   height: 1000px;
@@ -580,6 +761,28 @@ body {
       }
     }
   }
+
+  @media (max-width: 1023px) {
+    height: 1450px;
+
+    .item {
+      text-align: center;
+      margin-bottom: 50px;
+
+      .author {
+        flex-direction: column;
+        margin-top: 15px;
+      }
+
+      .name {
+        color: $blue !important;
+      }
+    }
+  }
+
+  @media (max-width: 479px) {
+    height: 1550px;
+  }
 }
 
 #form-contact {
@@ -621,5 +824,9 @@ body {
     border-radius: 3px;
     font-weight: 700;
     letter-spacing: 2px;
+  }
+
+  @media (max-width: 479px) {
+    width: 90%;
   }
 }
